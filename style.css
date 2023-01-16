@@ -65,16 +65,11 @@ width: 43%;
     width: 57%;
     }
 .logo {
-    justify-content: center;
-    width: 100%;
-    margin:15px 0 0
+    margin:0px 0 0
 }
 
-nav {
-    width: 60%;
-    height: 100%;
-}
-.nav span {
+
+.navbar-expand-md span {
     font-size: 20px;   
     color: #fdc11f
 }
@@ -130,13 +125,17 @@ li {
     padding: 0;
 }
 
-.nav>li>a {
+.navbar-expand-md>li>a {
     position: relative;
     display: block;
     padding: 0px 25px;
     height: 100%
 }
-
+.navbar-expand-md span {
+    color: #fdc11f;
+    font-size: 24px;
+    cursor: pointer;
+}
 .drop ul li:hover {
     background: rgba(41, 42, 43, 0.452);
 }
