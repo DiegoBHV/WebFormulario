@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 
@@ -10,168 +12,157 @@ body {
 }
 
 .cuerpo {
-    height: 100vh !important;
+    min-height: 100vh !important;
     position: absolute !important;
-    width: 100vw !important;
+    width: 100% !important;
     margin: auto !important;
     display: flex !important;
     flex-direction: column !important;
     background-color: #20364b;
 }
+
 .mw-full {
-max-width: 100%;
-}
-.header {
-    height: auto;
-    position: relative;
-    width: 100%;
-    display: flex;
-    z-index: 9999;
-    height: 100px;
-    justify-content: center;
+    max-width: 100%;
 }
 
-.masterh {
+.header {
+    padding: 20px 0 0;
     position: relative;
-    display: flex;
-    max-width: 1200px;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px;
     width: 100%;
+    max-width: 1200px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
 }
+
 
 .container {
     position: relative;
     display: block;
     width: 100%;
     max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     padding-right: 20px;
     padding-left: 20px;
 }
 
-.flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
+.subs {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 5fr 7fr;
+
 }
-.container .column1 {
-width: 43%;
-}
-.container .column2 {
-    width: 57%;
-    }
+
 .logo {
-    margin:0px 0 0
+    width: 100%;
+    display: grid;
+    align-items: center;
+    margin: 0px 0 0
 }
 
-
-.navbar-expand-md span {
-    font-size: 20px;   
-    color: #fdc11f
-}
 .logo img {
-    margin: 0px 0 0 20px;
+    margin: 0px 0 0 0px;
     padding: 0px;
     width: 150px;
     text-align: left;
 }
 
-ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    list-style-type: none;
-    padding-inline-start: 0px;
+.navbar {
+    display: grid;
+    grid-template-columns: 6fr 5fr 0.5fr;
+    align-items: center;
+}
+
+.nav span {
+    font-size: 20px;
+    color: #fdc11f;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+
+.nav-links {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 li {
     color: #fff;
-    font-size: 17px;
-
-}
-
-.drop ul {
+    font-size: 16px;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
 }
 
-.drop ul a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 17px;
-    padding: 0px 30px;
-
-    letter-spacing: 1px;
-
-}
-
-.drop ul a:hover {
-    color: #fdc11f
-}
-
-.drop ul li {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-expand-md>li>a {
-    position: relative;
-    display: block;
-    padding: 0px 25px;
-    height: 100%
-}
-.navbar-expand-md span {
-    color: #fdc11f;
-    font-size: 24px;
+.link-item {
+    text-align: center;
     cursor: pointer;
-}
-.drop ul li:hover {
-    background: rgba(41, 42, 43, 0.452);
+    padding: 0 0px;
+    display: block
 }
 
-.drop ul ul {
+.link-item:hover {
+    color: #fdc11f;
+
+}
+
+.dropdown {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    width: 100%;
+    z-index: 2;
     padding: 0;
+    list-style: none;
+    margin: 0px;
+    top: 100%;
 }
 
-.drop ul ul li {
-    float: none;
+.dropdown li {
+    display: block;
     width: 140px;
 }
 
-.drop ul ul a {
-    padding: 15px 15px;
-    background-color: #000000c0;
-}
-
-.drop ul li:hover>ul {
-    display: block;
-    border-top: 2px solid #fdc11f;
-    width: 140px
-}
-
-.espacio1 {
-    height: 75px;
+.div_drop {
+    text-align: center;
+    display: inline-block;
     position: relative;
 }
 
+.div_drop:hover .dropdown {
+    display: block;
+
+}
+
+.dropdown .link-item {
+    text-align: left;
+    margin: 0 0 0 0px;
+    padding: 2px 0 2px 7px;
+}
+
+.search-icon {
+    text-align: center;
+
+}
+
+.search-icon span {
+    color: #fdc11f;
+    font-size: 24px;
+    line-height: 40px;
+    cursor: pointer;
+
+}
+
+.column2 {
+    margin: auto;
+
+}
+
 h5 {
-    font-size: 12px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 22px;
     color: #ffffff;
     font-weight: 300;
     margin: 0 70px 0 0;
@@ -199,7 +190,6 @@ h5 {
 }
 
 .form1_input,
-.form1_label,
 .form1_submit,
 .form1_textarea {
     display: block;
@@ -209,6 +199,7 @@ h5 {
 .form1_input:focus {
     outline: 1px solid;
 }
+
 .form1_textarea:focus {
     outline: 1px solid;
 }
@@ -217,14 +208,15 @@ h5 {
     font-size: 15px;
     padding: 10px 0 10px 20px;
     line-height: 18px;
-    max-width: 340px;
+    max-width: 330px;
     height: 40px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid #adadad;
-    margin: 0 0 25px 0;
+    margin: 25px 0 0px 0;
     font-weight: 400;
 }
+
 .form1_textarea {
     font-size: 15px;
     padding: 10px 20px 10px 20px;
@@ -235,17 +227,18 @@ h5 {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid #adadad;
-    margin: 0 0 25px 0;
+    margin: 25px 0 0 0;
     font-weight: 400;
 }
 
 
 .form1_submit {
     padding: 0px 0px 0 20px;
-    font-size: 15px;    
+    font-size: 15px;
     line-height: 18px;
     max-width: 94px;
     height: 40px;
+    margin: 25px 0 0;
     border-radius: 20px;
     background-color: #fdc11f;
     color: #20364b;
@@ -254,8 +247,152 @@ h5 {
     text-align: left;
     font-weight: 400;
 }
+
 .form1_submit span {
-    font-size: 12px;   
-    font-weight: 400; 
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+.button-menu {
+    display: none;
+
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 5px 0 0 10px;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .navbar {
+        grid-template-columns: 3fr 3fr 50px;
+        justify-items: end;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin-left: -100%;
+        transition: all .2s linear;
+        background-color: rgb(255 255 255 / 85%);
+        z-index: 100;
+        grid-template-columns: 1fr;
+
+    }
+
+    .main-nav.show {
+        margin-left: 0;
+
+    }
+
+
+    .div_drop:hover .dropdown {
+        top: 0;
+        position: relative;
+    }
+
+    .nav-links {
+        display: grid;
+        width: 100%;
+        padding: 30px 20% 0px 10%;
+        grid-template-columns: 1fr;
+
+
+    }
+
+    .link-item {
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+        color: #000;
+        text-align: left;
+
+    }
+
+    .link-item:after {
+        position: absolute;
+        content: "";
+        background-color: black;
+        bottom: -5px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        transition: 0.5s ease all;
+
+    }
+    
+    .button-menu {
+        z-index: 200;
+        width: 35px;
+        height: 40px;
+        border: none;
+        display: flex;
+        background: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+    }
+
+    .button-menu span {
+        width: 35px;
+        height: 2px;
+        margin-bottom: 7px;
+        position: relative;
+        background: #fff;
+        border-radius: 3px;
+        transform-origin: 4px 0px;
+        transition: all .2s linear;
+
+    }
+
+    .button-menu.close span:first-child {
+        opacity: 1;
+        transform: rotate(45deg) translate(0px, 0px);
+        background: #000;
+    }
+    .button-menu.close span:nth-child(2) {
+        visibility: hidden;
+    }
+    .button-menu.close span:last-child {
+        opacity: 1;
+        transform: rotate(-45deg) translate(0px, 0px);
+        background: #000;
+    }
+
+    .search-icon span {
+        line-height: 1;
+    }
+
+    .bold {
+    margin: 35px 0 15px;
+    }
+    .subs {
+        grid-template-columns: 1fr;
+
+    }
+
+    .form1 {
+        padding: 5px 0 0;
+
+    }
+    .form1_input {
+        max-width: 100%;
+    }
+
+    .form1_textarea {
+        max-width: 100%;
+    }
+
+
 
 }
