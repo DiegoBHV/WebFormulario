@@ -142,16 +142,48 @@ li {
     padding: 2px 0 2px 7px;
 }
 
-.search-icon {
-    text-align: center;
-
+.buscador {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
-.search-icon span {
-    color: #fdc11f;
+.buscador span {
+    background-color: #fdc11f;
+    position: absolute;
+    color: #20364b;
     font-size: 24px;
+    top: 22px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     line-height: 40px;
     cursor: pointer;
+    text-align: center;
+    transition: .5s;
+}
+
+
+.btn-search {
+outline: none;
+width: 0px;
+padding: 0 0px 0 0px;
+border-radius: 15px;
+border: 1px solid #fdc11f;
+height: 30px;
+border-width: 0px;
+font-size: 15px;
+transition: all .7s ease;
+}
+
+.buscador:hover .btn-search {
+    width: 200px;
+    padding: 0 30px 0 15px;
+    border-width: 2px;
+}
+.buscador:hover span {
+    transform: rotate(-360deg);
 
 }
 
@@ -245,6 +277,7 @@ h5 {
     border: none;
     cursor: pointer;
     text-align: left;
+    position: relative;
     font-weight: 400;
 }
 
@@ -253,6 +286,22 @@ h5 {
     font-weight: 400;
 
 }
+.form1_submit:hover {
+    background: #20364b;
+    box-shadow:  0 0 5px black;
+    padding-right: 15px;
+    color: #fdc11f;
+    transition: all .3s;
+    max-width: 100px;
+    width: 100px;
+
+}
+.form1_submit:hover span {
+    position: absolute;
+    right: 15px;
+    display: inline-block;
+}
+
 
 .button-menu {
     display: none;
@@ -380,6 +429,22 @@ h5 {
         grid-template-columns: 1fr;
 
     }
+    .buscador {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .buscador span {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .buscador:hover .btn-search {
+        padding: 0 10px 0 15px;
+        width: 200px;
+    }
+
+
 
     .form1 {
         padding: 5px 0 0;

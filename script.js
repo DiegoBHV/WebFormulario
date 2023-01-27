@@ -75,11 +75,3 @@ navWrapper.addEventListener('click',e => {
   }
 });
 
-
-
-
-
-// enviar(CloseEvent){
-
-//   window.location("google.com");
-// }
